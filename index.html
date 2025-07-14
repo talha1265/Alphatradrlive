@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alpha Traders</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Alpha Traders</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#payment">Payment</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#footer">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="overlay">
+      <h1>Alpha Traders</h1>
+      <h2>Free things give you nothing.<br>Grab the opportunity before it's gone.<br>This is only for one time – learn the skill and make your own business.</h2>
+      <a href="#payment" class="hero-btn">Register Now</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <h2>About Us</h2>
+    <p>We are <strong>not a coaching</strong> or <strong>an institute</strong> to spoil your money. We give real skills for real growth.</p>
+    <p>Our mission is to empower individuals with practical knowledge and entrepreneurial mindset that leads to financial independence.</p>
+  </section>
+
+  <!-- Courses Section -->
+  <section class="courses-section" id="courses">
+    <h2>Our Courses</h2>
+    <ul>
+      <li>🚀 Web Development – Build real-world web applications and launch your startup.</li>
+      <li>📈 Stock Market – Master trading with technical and fundamental analysis.</li>
+      <li>🚧 More Coming Soon... – Stay tuned for more career-transforming content!</li>
+    </ul>
+  </section>
+
+  <!-- Payment Section -->
+  <section class="payment-section" id="payment">
+    <h2>Make a Payment</h2>
+    <p>Scan this QR Code to make a payment of ₹199</p>
+    <img src="qr.jpeg" alt="QR Code for Payment" class="qr-code" />
+
+    <form id="paymentForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="text" id="whatsapp" placeholder="WhatsApp Number" required />
+        <label for="course" class="file-label">Select Course:</label>
+  <select id="course" required>
+    <option value="" disabled selected>Choose your course</option>
+    <option value="Web Development and Entrepreneurship">Web Development and Entrepreneurship</option>
+    <option value="Stock Market">Stock Market</option>
+  </select>
+
+      <label for="screenshot" class="file-label">Upload Payment Screenshot:</label>
+      <input type="file" id="screenshot" accept="image/*" required />
+
+      <button type="submit">Submit & Send to WhatsApp</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p>© 2025 Alpha Traders. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
