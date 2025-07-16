@@ -49,24 +49,29 @@
   <!-- Payment Section -->
   <section class="payment-section" id="payment">
     <h2>Make a Payment</h2>
-    <p>Scan this QR Code to make a payment of ₹199</p>
-    <img src="qr.png" alt="QR Code for Payment" class="qr-code" />
+    <p>Scan this QR Code to make a payment of ₹249</p>
+    <img src="qr.jpeg" alt="QR Code for Payment" class="qr-code" />
 
     <form id="paymentForm">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="text" id="whatsapp" placeholder="WhatsApp Number" required />
-        <label for="course" class="file-label">Select Course:</label>
+  <input type="text" id="name" placeholder="Your Name" required />
+  <input type="text" id="whatsapp" placeholder="WhatsApp Number" required />
+
+  <label for="course" class="file-label">Select Course:</label>
   <select id="course" required>
     <option value="" disabled selected>Choose your course</option>
     <option value="Web Development and Entrepreneurship">Web Development and Entrepreneurship</option>
     <option value="Stock Market">Stock Market</option>
   </select>
 
-      <label for="screenshot" class="file-label">Upload Payment Screenshot:</label>
-      <input type="file" id="screenshot" accept="image/*" required />
+  <label for="screenshot" class="file-label">Upload Payment Screenshot:</label>
+  <input type="file" id="screenshot" accept="image/*" required />
 
-      <button type="submit">Submit & Send to WhatsApp</button>
-    </form>
+  <!-- ✅ NEW FIELD: Referral Coupon -->
+  <input type="text" id="refCoupon" placeholder="Referral Coupon (if any)" />
+
+  <button type="submit">Submit & Send to WhatsApp</button>
+</form>
+
   </section>
 
   <!-- Footer -->
