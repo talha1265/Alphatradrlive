@@ -21,7 +21,7 @@ body {
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: #00b894;
+  color: #c1121f;
 }
 /* Hamburger */
 .hamburger {
@@ -101,7 +101,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #00b894;
+  color: #c1121f;
 }
 
 /* Hero Section */
@@ -184,7 +184,7 @@ select {
 
 button {
   padding: 12px;
-  background-color: #00b894;
+  background-color: #c1121f;
   border: none;
   color: white;
   font-weight: bold;
@@ -195,7 +195,7 @@ button {
 }
 
 button:hover {
-  background-color: #019875;
+  background-color: #a10f1a;
 }
 
 /* Footer */
@@ -260,7 +260,6 @@ footer {
     font-size: 16px;
   }
 
-  
     .nav-links {
     display: none;
   }
@@ -279,7 +278,7 @@ footer {
 .hero-btn {
   margin-top: 20px;
   padding: 12px 25px;
-  background-color: #00b894;
+  background-color: #c1121f;
   color: white;
   border: none;
   border-radius: 8px;
@@ -291,7 +290,7 @@ footer {
 }
 
 .hero-btn:hover {
-  background-color: #019875;
+  background-color: #a10f1a;
 }
 
 /* About Section */
@@ -302,7 +301,7 @@ footer {
 }
 
 .about-section h2 {
-  color: #00b894;
+  color: #c1121f;
   margin-bottom: 20px;
 }
 
@@ -313,7 +312,6 @@ footer {
   max-width: 800px;
 }
 
-
 /* Courses Section */
 .courses-section {
   background-color: #1c1c1c;
@@ -322,7 +320,7 @@ footer {
 }
 
 .courses-section h2 {
-  color: #00b894;
+  color: #c1121f;
   margin-bottom: 20px;
 }
 
