@@ -1,4 +1,4 @@
-<script>
+
   const paymentForm = document.getElementById("paymentForm");
   const registerBtn = document.getElementById("registerBtn");
   const verifyBtn = document.getElementById("verifyBtn");
@@ -37,4 +37,4 @@
 
     window.open(whatsappURL, "_blank");
   });
-</script>
+
