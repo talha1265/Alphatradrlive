@@ -10,34 +10,36 @@
 
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo">Alpha Traders</div>
+    <div class="logo">
+      <a href="#"><img src="./logoliv.png" alt="Alpha Traders Logo" /></a>
+    </div>
     <ul class="nav-links">
       <li><a href="#">Home</a></li>
       <li><a href="#payment">Payment</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#courses">Courses</a></li>
       <li><a href="#footer">Contact</a></li>
+      <!-- Mobile Register Button -->
+      <li><a href="#payment" class="nav-register-btn">Register</a></li>
     </ul>
   </nav>
 
   <!-- Hero Section -->
   <header class="hero">
-  <div class="overlay">
-  <h1>Alpha Traders</h1>
-  <h2>We are a government-verified organization, dedicated to training individuals with real, in-demand skills. Learn from experts and take the first step toward building your own business or career.</h2>
-  <a href="#payment" class="hero-btn">Register Now</a>
-</div>
-
+    <div class="overlay">
+      <h1>Alpha Traders</h1>
+      <h2>We are a government-verified organization, dedicated to training individuals with real, in-demand skills. Learn from experts and take the first step toward building your own business or career.</h2>
+      <a href="#payment" class="hero-btn">Register Now</a>
+    </div>
   </header>
 
   <!-- About Section -->
   <section class="about-section" id="about">
     <h2>About Us</h2>
-   <p>We are <strong>not a coaching center</strong> or <strong>an institute</strong> that wastes your money. We provide real skills for real growth.</p>
-<p>Our mission is to empower individuals with practical knowledge and an entrepreneurial mindset that leads to financial independence.</p>
-<p>During the program, you will work on real-world projects as part of a team, helping you build strong connections that can benefit your future career. These projects can also be used in your college minor and major submissions, as well as showcased in your resume.</p>
-<p>Even if you’re not interested in a job, we will personally support your startup journey under the <strong>Make in India</strong> initiative and help turn your ideas into reality.</p>
-
+    <p>We are <strong>not a coaching center</strong> or <strong>an institute</strong> that wastes your money. We provide real skills for real growth.</p>
+    <p>Our mission is to empower individuals with practical knowledge and an entrepreneurial mindset that leads to financial independence.</p>
+    <p>During the program, you will work on real-world projects as part of a team, helping you build strong connections that can benefit your future career. These projects can also be used in your college minor and major submissions, as well as showcased in your resume.</p>
+    <p>Even if you’re not interested in a job, we will personally support your startup journey under the <strong>Make in India</strong> initiative and help turn your ideas into reality.</p>
   </section>
 
   <!-- Courses Section -->
@@ -57,25 +59,23 @@
     <img src="qr.png" alt="QR Code for Payment" class="qr-code" />
 
     <form id="paymentForm">
-  <input type="text" id="name" placeholder="Your Name" required />
-  <input type="text" id="whatsapp" placeholder="WhatsApp Number" required />
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="text" id="whatsapp" placeholder="WhatsApp Number" required />
 
-  <label for="course" class="file-label">Select Mode:</label>
-  <select id="course" required>
-    <option value="" disabled selected>Choose your mode</option>
-    <option value="Web Development and Entrepreneurship">Remote</option>
-    <option value="Stock Market">On-site</option>
-  </select>
+      <label for="course" class="file-label">Select Mode:</label>
+      <select id="course" required>
+        <option value="" disabled selected>Choose your mode</option>
+        <option value="Web Development and Entrepreneurship">Remote</option>
+        <option value="Stock Market">On-site</option>
+      </select>
 
-  <label for="screenshot" class="file-label">Upload Payment Screenshot:</label>
-  <input type="file" id="screenshot" accept="image/*" required />
+      <label for="screenshot" class="file-label">Upload Payment Screenshot:</label>
+      <input type="file" id="screenshot" accept="image/*" required />
 
-  <!-- ✅ NEW FIELD: Referral Coupon -->
-  <input type="text" id="refCoupon" placeholder="Referral Coupon (if any)" />
+      <input type="text" id="refCoupon" placeholder="Referral Coupon (if any)" />
 
-  <button type="submit">Register & Send to WhatsApp</button>
-</form>
-
+      <button type="submit">Register & Send to WhatsApp</button>
+    </form>
   </section>
 
   <!-- Footer -->
