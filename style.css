@@ -188,6 +188,23 @@ footer {
     width: 180px;
   }
 }
+#verifyBtn {
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #c1121f;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#verifyBtn:hover {
+  background-color: #a10f1a;
+}
+
 
 @media screen and (max-width: 480px) {
   .hero {
