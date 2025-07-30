@@ -75,6 +75,10 @@ body {
       font-weight: bold;
       margin-left: 10px;
     }
+.nav-register-btn:hover {
+  color: black;
+  
+}
 
     /* Show button on small screens */
     @media (max-width: 768px) {
