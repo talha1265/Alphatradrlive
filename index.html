@@ -8,21 +8,28 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">
-      <a href="#"><img src="./logoliv.png" alt="Alpha Traders Logo" /></a>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#payment">Payment</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#courses">Courses</a></li>
-      <li><a href="#footer">Contact</a></li>
-      <!-- Mobile Register Button -->
-      <li><a href="#payment" class="nav-register-btn">Register</a></li>
-    </ul>
-  </nav>
+ <!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="#"><img src="./logoliv.png" alt="Alpha Traders Logo" /></a>
+  </div>
+
+  <!-- Hamburger Icon for Mobile -->
+  <div class="hamburger" id="hamburger">
+    ☰
+  </div>
+
+  <!-- Navigation Links -->
+  <ul class="nav-links" id="navLinks">
+    <li class="desktop-only"><a href="#">Home</a></li>
+    <li class="desktop-only"><a href="#payment">Payment</a></li>
+    <li class="desktop-only"><a href="#courses">Courses</a></li>
+
+    <!-- Always visible or shown in mobile -->
+    <li><a href="#about">About</a></li>
+    <li><a href="#payment" class="nav-register-btn">Register</a></li>
+  </ul>
+</nav>
 
   <!-- Hero Section -->
   <header class="hero">
