@@ -98,7 +98,9 @@ body {
   margin: 0;
 }
 a{
-  color:white;
+   color: white;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .nav-links desktop-only {
