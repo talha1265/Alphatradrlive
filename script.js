@@ -10,7 +10,7 @@
     e.preventDefault();
 
     const name = document.getElementById("name").value.trim();
-    const whatsapp = document.getElementById("whatsapp").value.trim();
+    const whatsapp = document.getElementById("email").value.trim();
     const course = document.getElementById("course").value;
     const coupon = document.getElementById("refCoupon").value.trim() || "None";
 
@@ -20,7 +20,7 @@
     }
 
     // Store data temporarily
-    formData = { name, whatsapp, course, coupon };
+    formData = { name, email, course, coupon };
 
     // Show QR section
     qrSection.style.display = "block";
@@ -30,7 +30,7 @@
   });
 
   verifyBtn.addEventListener("click", function () {
-    const message = `*Alpha Traders Payment Details*\n\nName: ${formData.name}\nEmail: ${formData.whatsapp}\nCourse: ${formData.course}\nReferral Coupon: ${formData.coupon}\n\nScreenshot: (Please send manually)`;
+    const message = `*Alpha Traders Payment Details*\n\nName: ${formData.name}\nEmail: ${formData.email}\nCourse: ${formData.course}\nReferral Coupon: ${formData.coupon}\n\nScreenshot: (Please send manually)`;
 
     const whatsappNumber = "917572082633"; // Replace with your WhatsApp number
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
