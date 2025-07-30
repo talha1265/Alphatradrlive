@@ -97,6 +97,9 @@ body {
   gap: 20px;
   margin: 0;
 }
+a{
+  color:white;
+}
 
 .nav-links desktop-only {
   color: white;
