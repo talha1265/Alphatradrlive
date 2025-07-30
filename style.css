@@ -377,32 +377,53 @@ footer {
   max-width: 800px;
   color: #f5f5f5;
 }
-
 /* Courses Section */
 .courses-section {
   background-color: #1c1c1c;
-  padding: 40px 20px;
+  padding: 60px 20px;
   text-align: center;
+  animation: fadeInCourses 1.5s ease-out;
 }
 
 .courses-section h2 {
   color: #c1121f;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  font-size: 32px;
+  text-shadow: 1px 1px 5px #000;
 }
 
 .courses-section ul {
   list-style: none;
   padding: 0;
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
   text-align: left;
 }
 
 .courses-section li {
   background-color: #2c2c2c;
-  margin: 10px 0;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-size: 16px;
+  margin: 16px 0;
+  padding: 18px 25px;
+  border-radius: 12px;
+  font-size: 17px;
   color: #f0f0f0;
+  position: relative;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+  animation: fadeInItem 0.8s ease forwards;
+}
+
+.courses-section li:hover {
+  background-color: #3a3a3a;
+  transform: scale(1.02);
+}
+
+@keyframes fadeInCourses {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInItem {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
