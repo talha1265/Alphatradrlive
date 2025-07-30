@@ -52,32 +52,32 @@
     </ul>
   </section>
 
-  <!-- Payment Section -->
-  <section class="payment-section" id="payment">
-    <h2>Make a Registration</h2>
+<!-- Payment Section -->
+<section class="payment-section" id="payment">
+  <h2>Make a Registration</h2>
+  <form id="paymentForm">
+    <input type="text" id="name" placeholder="Your Name" required />
+    <input type="email" id="whatsapp" placeholder="Email Address" required />
+
+    <label for="course" class="file-label">Select Mode:</label>
+    <select id="course" required>
+      <option value="" disabled selected>Choose your mode</option>
+      <option value="Remote">Remote</option>
+      <option value="On-site">On-site</option>
+    </select>
+
+    <input type="text" id="refCoupon" placeholder="Referral Coupon (if any)" />
+
+    <button type="submit" id="registerBtn">Register</button>
+  </form>
+
+  <div id="qrSection" style="display: none; margin-top: 20px;">
     <p>Scan this QR Code to make a payment of ₹499</p>
     <img src="qr.png" alt="QR Code for Payment" class="qr-code" />
+    <button id="verifyBtn">Verify & Send to WhatsApp</button>
+  </div>
+</section>
 
-    <form id="paymentForm">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="email" id="email" placeholder="Email Address" required />
-
-
-      <label for="course" class="file-label">Select Mode:</label>
-      <select id="course" required>
-        <option value="" disabled selected>Choose your mode</option>
-        <option value="Web Development and Entrepreneurship">Remote</option>
-        <option value="Stock Market">On-site</option>
-      </select>
-
-      <label for="screenshot" class="file-label">Upload Payment Screenshot:</label>
-      <input type="file" id="screenshot" accept="image/*" required />
-
-      <input type="text" id="refCoupon" placeholder="Referral Coupon (if any)" />
-
-      <button type="submit">Register & Send to WhatsApp</button>
-    </form>
-  </section>
   
   <!-- Logo Banner Below the Form -->
   <div class="logo-banner" style="margin-top: 40px; text-align: center;">
