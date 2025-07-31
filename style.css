@@ -427,7 +427,6 @@ footer {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-/* Reviews Section */
 .reviews-section {
   padding: 60px 20px;
   background: #1a1a1a;
