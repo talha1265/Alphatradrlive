@@ -427,3 +427,61 @@ footer {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+/* Reviews Section */
+.reviews-section {
+  padding: 60px 20px;
+  background: #1a1a1a;
+  text-align: center;
+}
+
+.reviews-section h2 {
+  font-size: 32px;
+  color: #ff3333;
+  margin-bottom: 40px;
+}
+
+.reviews-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+}
+
+.review-card {
+  flex: 0 0 auto;
+  width: 280px;
+  background: #121212;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  padding: 20px;
+  scroll-snap-align: start;
+  text-align: left;
+}
+
+.review-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.review-card h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.review-card p.college {
+  font-size: 14px;
+  color: #ff3333;
+  margin: 4px 0 10px;
+}
+
+.review-card p.review {
+  font-size: 15px;
+  color: #dddddd;
+  line-height: 1.4;
+}
+
