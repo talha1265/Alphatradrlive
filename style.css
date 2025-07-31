@@ -163,6 +163,7 @@ body {
   color: #ffeb3b;
   font-weight: 600;
   margin-top: 10px;
+  magin-bottom:6px;
   animation: fadeIn 2.2s ease-out;
 }
 
