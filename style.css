@@ -499,8 +499,9 @@ footer {
   .empower-text {
     max-width: 800px;
     margin: auto;
-    font-size: 1.3rem;
-    line-height: 1.7;
+      font-size: 1.5rem;
+    line-height: 1.8;
+    font-weight: 700;
     color: #fff;
     animation: floatText 3s ease-in-out infinite, glowText 1.5s ease-in-out infinite alternate;
     text-shadow: 0 0 10px rgba(255,255,255,0.7), 0 0 20px rgba(255,255,255,0.5);
