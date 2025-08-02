@@ -488,63 +488,43 @@ footer {
   line-height: 1.4;
 }
 
- .empower-banner {
-    background: linear-gradient(135deg, #101010, #1a1a1a);
-    color: #f0f0f0;
+.empower-banner {
+    background: #c1121f;
     padding: 60px 20px;
     text-align: center;
     position: relative;
-    z-index: 1;
+    overflow: hidden;
   }
 
-  .empower-banner::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.03), transparent 70%);
-    z-index: -1;
-  }
-
-  .empower-content {
+  .empower-text {
     max-width: 800px;
     margin: auto;
-    animation: fadeInSlide 1s ease forwards;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #fff;
+    animation: floatText 3s ease-in-out infinite, glow 2s ease-in-out infinite alternate;
   }
 
-  .empower-content h2 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-    font-weight: bold;
-    color: #ffffff;
+  @keyframes floatText {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
   }
 
-  .empower-content p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #cccccc;
-  }
-
-  @keyframes fadeInSlide {
-    from {
-      opacity: 0;
-      transform: translateY(40px);
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 10px rgba(255,255,255,0.4),
+                   0 0 20px rgba(255,255,255,0.2);
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+    100% {
+      text-shadow: 0 0 20px rgba(255,255,255,0.8),
+                   0 0 30px rgba(255,255,255,0.4);
     }
   }
 
   @media (max-width: 600px) {
-    .empower-content h2 {
-      font-size: 1.6rem;
-    }
-
-    .empower-content p {
-      font-size: 1rem;
+    .empower-text {
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
   }
