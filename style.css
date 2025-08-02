@@ -488,3 +488,54 @@ footer {
   line-height: 1.4;
 }
 
+ .empower-banner {
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .empower-content {
+    max-width: 900px;
+    margin: auto;
+    opacity: 0;
+    animation: fadeSlideUp 1.2s ease-out forwards;
+  }
+
+  .empower-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+  }
+
+  .empower-content p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #ccc;
+  }
+
+  @keyframes fadeSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Optional Responsive Tweaks */
+  @media (max-width: 600px) {
+    .empower-content h2 {
+      font-size: 1.6rem;
+    }
+
+    .empower-content p {
+      font-size: 1rem;
+    }
+  }
