@@ -489,13 +489,13 @@ footer {
 }
 
  .empower-banner {
-    background: #c1121f; /* Same as About Us h2 color */
+    background:  #1a1a1a; /* Same as About Us h2 color */
     padding: 40px 15px;
     text-align: center;
   }
 
   .empower-box {
-    background: #1a1a1a;
+    background: #c1121f;
     display: inline-block;
     padding: 20px 30px;
     border-radius: 16px;
