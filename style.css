@@ -119,6 +119,37 @@ body {
 .nav-links a:hover::after {
   width: 100%;
 }
+/* Bottom Info */
+.inh {
+    background: linear-gradient(135deg, #b31217, #e52d27);
+    /* same theme */
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px 20px;
+    border-radius: 0 0 40px 40px;
+}
+
+.inh p {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.btnd {
+    padding: 5px 26px;
+    background-color: #fff;
+    color: #b31217;
+    border: none;
+    border-radius: 30px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: 0.3s;
+    margin-top: 4px;
+}
+
+.btnd:hover {
+    background-color: #ffd6ec;
+}
 
 /* Hero Section */
 .hero {
@@ -289,6 +320,23 @@ footer {
 
 /* Responsive Queries */
 @media screen and (max-width: 768px) {
+   .inh p {
+    font-size: .8rem;
+    margin-bottom: 6px;
+    font-weight: 400;
+}
+
+.btnd {
+    padding: 4px 20px;
+    background-color: #fff;
+    color: #b31217;
+    border: none;
+    border-radius: 30px;
+    font-weight: 300;
+    text-decoration: none;
+    transition: 0.3s;
+    margin-top: 4px;
+}
   .hero h1 {
     font-size: 36px;
   }
@@ -538,3 +586,4 @@ footer {
       padding: 15px 20px;
     }
   }
+
