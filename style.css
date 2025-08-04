@@ -262,6 +262,14 @@ body {
   .hero-left, .hero-right {
     width: 100%;
   }
+  .hero-text-box {
+  max-width: 100%;
+}
+  .image-box {
+  width: 100%;
+ margin-top:20px;
+  animation: floatUpDown 3s ease-in-out infinite;
+}
 
   .hero-left h1 {
     font-size: 36px;
@@ -734,6 +742,7 @@ footer {
       padding: 15px 20px;
     }
   }
+
 
 
 
