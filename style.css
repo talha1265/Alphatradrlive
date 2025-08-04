@@ -632,6 +632,9 @@ footer {
     transition: 0.3s;
   
 }
+.btnda:hover {
+    background-color: #ffd6ec;
+}
 
 .courses-section ul {
   list-style: none;
@@ -775,6 +778,7 @@ footer {
       padding: 15px 20px;
     }
   }
+
 
 
 
