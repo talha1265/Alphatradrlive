@@ -226,7 +226,7 @@ body {
 .image-box {
   width: 90%;
   max-width: 400px;
-/*   animation: floatUpDown 3s ease-in-out infinite; */
+  animation: floatUpDown 3s ease-in-out infinite;
 }
 
 .image-box img {
@@ -311,7 +311,7 @@ body {
   }
 
   .image-box {
-    max-width: 250px;
+    
   }
 }
 
@@ -749,6 +749,7 @@ footer {
       padding: 15px 20px;
     }
   }
+
 
 
 
