@@ -283,6 +283,9 @@ body {
     margin-top: 30px;
     max-width: 300px;
   }
+  .hero-right {
+    margin-top: 30px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -742,6 +745,7 @@ footer {
       padding: 15px 20px;
     }
   }
+
 
 
 
