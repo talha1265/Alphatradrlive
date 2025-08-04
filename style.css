@@ -267,8 +267,12 @@ body {
 }
   .image-box {
   width: 100%;
- margin-top:40px;
+
   animation: floatUpDown 3s ease-in-out infinite;
+}
+   .image-box img {
+  width: 100%;
+
 }
 
   .hero-left h1 {
@@ -745,6 +749,7 @@ footer {
       padding: 15px 20px;
     }
   }
+
 
 
 
