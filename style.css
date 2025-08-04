@@ -621,6 +621,17 @@ footer {
   font-size: 32px;
   text-shadow: 1px 1px 5px #000;
 }
+.btnda {
+    padding: 2px 26px;
+    background-color: #fff;
+    color: #b31217;
+    border: none;
+    border-radius: 30px;
+    font-weight: 300;
+    text-decoration: none;
+    transition: 0.3s;
+  
+}
 
 .courses-section ul {
   list-style: none;
@@ -764,6 +775,7 @@ footer {
       padding: 15px 20px;
     }
   }
+
 
 
 
