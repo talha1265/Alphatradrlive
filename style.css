@@ -157,7 +157,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('hero.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),  center/cover no-repeat;
   height: 85vh;
   padding: 0 5vw;
   position: relative;
@@ -728,5 +728,6 @@ footer {
       padding: 15px 20px;
     }
   }
+
 
 
