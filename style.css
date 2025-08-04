@@ -94,7 +94,7 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  align-item:center;
+  align-items:center;
   justify-content:center;
   gap: 20px;
   margin: 0;
@@ -764,6 +764,7 @@ footer {
       padding: 15px 20px;
     }
   }
+
 
 
 
