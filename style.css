@@ -396,7 +396,7 @@ body {
 .payment-section {
   padding: 40px 20px;
   text-align: center;
-  background-color: #1a1a1a;
+ background-color: #141414;
 }
 
 .qr-code {
@@ -574,7 +574,7 @@ footer {
 }
 /* Courses Section */
 .courses-section {
-  background-color: #1c1c1c;
+  background-color: #141414;
   padding: 60px 20px;
   text-align: center;
   animation: fadeInCourses 1.5s ease-out;
@@ -624,7 +624,7 @@ footer {
 }
 .reviews-section {
   padding: 60px 20px;
-  background: #1a1a1a;
+  background-color: #141414;
   text-align: center;
 }
 
@@ -729,6 +729,7 @@ footer {
       padding: 15px 20px;
     }
   }
+
 
 
 
