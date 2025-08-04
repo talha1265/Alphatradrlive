@@ -254,7 +254,7 @@ body {
 @media screen and (max-width: 768px) {
   .hero-section {
     flex-direction: column;
-    height: 95vh;
+    height:auto;
     padding: 40px 20px;
     text-align: center;
   }
@@ -745,6 +745,7 @@ footer {
       padding: 15px 20px;
     }
   }
+
 
 
 
