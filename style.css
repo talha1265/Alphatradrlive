@@ -120,6 +120,10 @@ body {
   width: 100%;
 }
 /* Bottom Info */
+.top-banner{
+  background-color: #141414;
+}
+  
 .inh {
     background: linear-gradient(135deg, #b31217, #e52d27);
     /* same theme */
@@ -729,6 +733,7 @@ footer {
       padding: 15px 20px;
     }
   }
+
 
 
 
