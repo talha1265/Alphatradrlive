@@ -122,8 +122,20 @@ body {
 /* Bottom Info */
 .top-banner{
   background-color: #141414;
+ transform: translateY(-100%);
+  opacity: 0;
+  animation: slideDown 0.8s ease-out forwards;
+  z-index: 1;
+  position: relative;
 }
-  
+
+/* Slide down animation */
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .inh {
     background: linear-gradient(135deg, #b31217, #e52d27);
     /* same theme */
@@ -749,6 +761,7 @@ footer {
       padding: 15px 20px;
     }
   }
+
 
 
 
