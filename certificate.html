@@ -116,101 +116,108 @@
   document.getElementById("navLinks").classList.toggle("active");
 });
        
-    document.getElementById('certificateForm').addEventListener('submit', function (e) {
+  document.getElementById('certificateForm').addEventListener('submit', function (e) {
   e.preventDefault();
 
   const name = document.getElementById('studentName').value;
   const father = document.getElementById('fatherName').value;
   const course = document.getElementById('course').value;
-    const passcode = document.getElementById('passcode').value;
+  const passcode = document.getElementById('passcode').value;
 
-  // ✅ Set your secure passcode here
-  const VALID_PASSCODE = 'ACE2025';
+  fetch('https://yourdomain.com/api/generate-certificate', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ studentName: name, fatherName: father, course, passcode })
+  })
+  .then(res => {
+    if (!res.ok) throw new Error('Unauthorized');
+    return res.json();
+  })
+  .then(data => {
+    // ✅ Backend verified passcode, generate the certificate now
 
-  if (passcode !== VALID_PASSCODE) {
-    alert('Invalid passcode. Please contact the institute for assistance.');
-    return;
-  }
+    const canvas = document.getElementById('certificateCanvas');
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+    const bg = new Image();
+    const logo = new Image();
+    const signature = new Image();
+    const mesc = new Image();
 
-  const canvas = document.getElementById('certificateCanvas');
-  const ctx = canvas.getContext('2d');
-         
+    bg.src = 'bg.png';
+    logo.src = 'logo.png';
+    signature.src = 'signature.png';
+    mesc.src = 'msme.png';
 
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+    Promise.all([
+      new Promise(res => bg.onload = res),
+      new Promise(res => logo.onload = res),
+      new Promise(res => signature.onload = res),
+      new Promise(res => mesc.onload = res)
+    ]).then(() => {
+      // Draw background
+      ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
 
-  const bg = new Image();
-  const logo = new Image();
-  const signature = new Image();
-  const mesc = new Image();
+      // Logo (centered and larger)
+      const logoWidth = 108;
+      const logoHeight = 108;
+      const logoX = (canvas.width - logoWidth) / 2;
+      ctx.drawImage(logo, logoX, 100, logoWidth, logoHeight);
 
-  bg.src = 'bg.png';
-  logo.src = 'logo.png';
-  signature.src = 'signature.png';
-  mesc.src = 'msme.png';
+      // Institute Name
+      ctx.font = '28px Poppins';
+      ctx.fillStyle = 'rgb(193, 18, 31)';
+      ctx.textAlign = 'center';
+      ctx.fillText('Advance Computer Education Center', canvas.width / 2, 240);
 
-  Promise.all([
-    new Promise(res => bg.onload = res),
-    new Promise(res => logo.onload = res),
-    new Promise(res => signature.onload = res),
-    new Promise(res => mesc.onload = res)
-  ]).then(() => {
-    // Draw background
-    ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
+      // Certificate Title
+      ctx.font = '24px Poppins';
+      ctx.fillStyle = '#000';
+      ctx.fillText('Certificate of Completion', canvas.width / 2, 280);
 
-    // Logo (centered and larger)
-    const logoWidth = 108; // 80 * 1.35
-    const logoHeight = 108;
-    const logoX = (canvas.width - logoWidth) / 2;
-    
-    ctx.drawImage(logo, logoX, 100, logoWidth, logoHeight);
+      // Body Text
+      ctx.font = '18px Poppins';
+      ctx.fillText(`This is to certify that`, canvas.width / 2, 310);
+      ctx.fillText(`${name}`, canvas.width / 2, 335);
+      ctx.fillText(`S/O ${father}`, canvas.width / 2, 360);
+      ctx.fillText(`has successfully completed the ${course} course.`, canvas.width / 2, 385);
 
-    // Institute Name (centered below logo)
-    ctx.font = '28px Poppins';
-    ctx.fillStyle = 'rgb(193, 18, 31)';
-    ctx.textAlign = 'center';
-    ctx.fillText('Advance Computer Education Center', canvas.width / 2, 240);
+      // Signature
+      const signatureX = canvas.width - 230;
+      const signatureY = 410;
+      ctx.drawImage(signature, signatureX, signatureY, 120, 60);
 
-    // Certificate Title
-    ctx.font = '24px Poppins';
-    ctx.fillStyle = '#000';
-    ctx.fillText('Certificate of Completion', canvas.width / 2, 280);
+      // Authorized Text
+      ctx.font = '14px Poppins';
+      ctx.fillText('Authorized Signatory', signatureX + 60, signatureY + 70);
 
-    // Body Text
-    ctx.font = '18px Poppins';
-    ctx.fillText(`This is to certify that`, canvas.width / 2, 310);
-    ctx.fillText(`${name}`, canvas.width / 2, 335);
-    ctx.fillText(`S/O ${father}`, canvas.width / 2, 360);
-    ctx.fillText(`has successfully completed the ${course} course.`, canvas.width / 2, 385);
+      // Issued Date
+      ctx.textAlign = 'left';
+      ctx.fillText('Issued Date: ' + new Date().toLocaleDateString(), 80, signatureY + 70);
 
-    // Signature
-    const signatureX = canvas.width - 230;
-    const signatureY = 410;
-    ctx.drawImage(signature, signatureX, signatureY, 120, 60);
+      // MSME Logo
+      const mescWidth = 100;
+      const mescHeight = 60;
+      const mescX = (canvas.width - mescWidth) / 2;
+      const mescY = canvas.height - 120 - mescHeight;
+      ctx.drawImage(mesc, mescX, mescY, mescWidth, mescHeight);
 
-    // Authorized Text
-    ctx.font = '14px Poppins';
-    ctx.fillText('Authorized Signatory', signatureX + 60, signatureY + 70);
-
-    // Issued Date (left-aligned, same Y as signature text)
-    ctx.textAlign = 'left';
-    ctx.fillText('Issued Date: ' + new Date().toLocaleDateString(), 80, signatureY + 70);
-
-    // MSME logo at bottom center, 40px above bottom
-    const mescWidth = 100;
-    const mescHeight = 60;
-    const mescX = (canvas.width - mescWidth) / 2;
-    const mescY = canvas.height - 120 - mescHeight;
-    ctx.drawImage(mesc, mescX, mescY, mescWidth, mescHeight);
-
-    // Show canvas and link
-    canvas.style.display = 'block';
-    const downloadLink = document.getElementById('downloadLink');
-    downloadLink.href = canvas.toDataURL();
-    downloadLink.style.display = 'inline-block';
-    downloadLink.innerText = 'Download Certificate';
+      // Show certificate and download link
+      canvas.style.display = 'block';
+      const downloadLink = document.getElementById('downloadLink');
+      downloadLink.href = canvas.toDataURL();
+      downloadLink.style.display = 'inline-block';
+      downloadLink.innerText = 'Download Certificate';
+    });
+  })
+  .catch(err => {
+    alert("Invalid passcode. Please contact support.");
   });
 });
+
 
 </script>
 
