@@ -1,1 +1,130 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alpha Traders - Government Certified Skill Training & Internships</title>
+  <meta name="description" content="Alpha Traders is a government-certified platform offering real-world skills and internships in Web Development and Stock Trading. Empower your future with job-ready expertise.">
+  <meta name="keywords" content="Alpha Traders, Web Development Training, Stock Market Internship, Government Certified, Online Skill Programs, Make in India, Freelancing, Startup Support">
+  <meta name="author" content="Alpha Traders">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Alpha Traders - Certified Skill Training Programs" />
+  <meta property="og:description" content="Join Alpha Traders to learn job-ready skills in Web Development, Stock Trading, and more. Government certified and career-focused." />
+  <meta property="og:image" content="http://alphatradr.online/images/og-image.jpg" />
+  <meta property="og:url" content="http://alphatradr.online/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="canonical" href="http://alphatradr.online/" />
+  <link rel="icon" href="http://alphatradr.online/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+ <!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="#"><img src="./logoliv.png" alt="Alpha Traders Logo" /></a>
+  </div>
+
+  <!-- Hamburger Icon for Mobile -->
+  <div class="hamburger" id="hamburger">
+    ☰
+  </div>
+
+  <!-- Navigation Links -->
+  <ul class="nav-links" id="navLinks">
+    <li ><a href="#">Home</a></li>
+      
+    <li ><a href="intern.html">Internship Program</a></li>
+    <li ><a href="#courses">Certificates</a></li>
+
+    <!-- Always visible or shown in mobile -->
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="#payment" class="nav-register-btn">Contact Us</a></li>
+  </ul>
+</nav>
+           <!-- Hero Banner -->
+    <section class="top-banner">
+       <div class="inh">
+      <p>Enroll Internship And Training Program, Seats Are Limited. Hurry Up!🚀</p>
+      <a href="#enroll" class="btnd enroll-btnd">Enroll Now</a>
+       </div>
+    </section>
+
+
+
+
+
+
+
+  <!-- Courses Section -->
+  <section class="courses-section" id="courses">
+    <h2>Contact Us For Your Business Enquiry</h2>
+    <ul>
+      <li>🚀 Make Your Business Online.</li>
+   
+    </ul>
+  </section>
+
+<!-- Payment Section -->
+<section class="payment-section" id="payment">
+  <h2>Make You Enquiry</h2>
+<form id="whatsappForm">
+  <input type="text" id="name" placeholder="Your Name" required />
+  <input type="text" id="niche" placeholder="Your Business Niche" required />
+  <input type="text" id="city" placeholder="Your City" required />
+  <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+  <button type="submit">Send via WhatsApp</button>
+</form>
+</section>
+
+
+ 
+   <!-- Empowerment Banner Section -->
+<section class="empower-banner">
+  <div class="empower-box">
+    <p class="empower-text">
+      Gain real-world skills by working on live projects—because experience matters for both careers and startups.
+    </p>
+  </div>
+</section>
+
+
+  
+  <!-- Logo Banner Below the Form -->
+  <div class="logo-banner" style="margin-top: 4px; margin-bottom: 8px; text-align: center;">
+    <img src="./logoliv.png" alt="Alpha Traders Banner Logo" style="max-width: 300px; width: 100%;" />
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p>© 2025 Alpha Traders. All rights reserved.</p>
+  </footer>
+
+    <script>
+      document.getElementById("hamburger").addEventListener("click", function () {
+  document.getElementById("navLinks").classList.toggle("active");
+});
+  document.getElementById("whatsappForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const niche = document.getElementById("niche").value.trim();
+    const city = document.getElementById("city").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const fullMessage = `Hello, I would like to connect with you.\n\nName: ${name}\nBusiness Niche: ${niche}\nCity: ${city}\nMessage: ${message}`;
+    
+    const phoneNumber = "918853066278"; // ← Replace this with your WhatsApp number
+    const encodedMessage = encodeURIComponent(fullMessage);
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    window.open(whatsappURL, "_blank");
+  });
+</script>
+
+</body>
+</html>
+
