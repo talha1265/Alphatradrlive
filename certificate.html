@@ -66,16 +66,14 @@
 <section class="payment-section" id="payment">
   <h2>Generate Your Certificate</h2>
   <form id="certificateForm">
-                    <label for="studentName">Student Name:</label>
-                    <input type="text" id="studentName" name="studentName" required>
+                    
+                    <input type="text" id="studentName" name="studentName" placeholder="Student Name" required>
 
-                    <label for="fatherName">Father's Name:</label>
-                    <input type="text" id="fatherName" name="fatherName" required>
+                    <input type="text" id="fatherName" name="fatherName" placeholder="Father Name" required>
 
-                    <label for="course">Course:</label>
-                    <input type="text" id="course" name="course" required>
-                    <label for="passcode">Enter Passcode:</label>
-                    <input type="password" id="passcode" name="passcode" required>
+                    <input type="text" id="course" name="course" placeholder=" Web Developer Internship Program" required>
+                    
+                    <input type="password" id="passcode" name="passcode" placeholder="Enter Passcode" required>
 
 
                     <button type="submit">Generate Certificate</button>
@@ -116,105 +114,100 @@
   document.getElementById("navLinks").classList.toggle("active");
 });
        
-  document.getElementById('certificateForm').addEventListener('submit', function (e) {
+ 
+      document.getElementById('certificateForm').addEventListener('submit', function (e) {
   e.preventDefault();
 
   const name = document.getElementById('studentName').value;
   const father = document.getElementById('fatherName').value;
   const course = document.getElementById('course').value;
-  const passcode = document.getElementById('passcode').value;
+    const passcode = document.getElementById('passcode').value;
 
-  fetch('https://https://alphatradr.online//api/pass.js', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ studentName: name, fatherName: father, course, passcode })
-  })
-  .then(res => {
-    if (!res.ok) throw new Error('Unauthorized');
-    return res.json();
-  })
-  .then(data => {
-    // ✅ Backend verified passcode, generate the certificate now
+  // // ✅ Set your secure passcode here
 
-    const canvas = document.getElementById('certificateCanvas');
-    const ctx = canvas.getContext('2d');
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    const bg = new Image();
-    const logo = new Image();
-    const signature = new Image();
-    const mesc = new Image();
+  if (passcode !== VALID_PASSCODE) {
+    alert('Invalid passcode. Please contact the institute for assistance.');
+    return;
+  }
 
-    bg.src = 'bg.png';
-    logo.src = 'logo.png';
-    signature.src = 'signature.png';
-    mesc.src = 'msme.png';
 
-    Promise.all([
-      new Promise(res => bg.onload = res),
-      new Promise(res => logo.onload = res),
-      new Promise(res => signature.onload = res),
-      new Promise(res => mesc.onload = res)
-    ]).then(() => {
-      // Draw background
-      ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
+  const canvas = document.getElementById('certificateCanvas');
+  const ctx = canvas.getContext('2d');
+         
 
-      // Logo (centered and larger)
-      const logoWidth = 108;
-      const logoHeight = 108;
-      const logoX = (canvas.width - logoWidth) / 2;
-      ctx.drawImage(logo, logoX, 100, logoWidth, logoHeight);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Institute Name
-      ctx.font = '28px Poppins';
-      ctx.fillStyle = 'rgb(193, 18, 31)';
-      ctx.textAlign = 'center';
-      ctx.fillText('Advance Computer Education Center', canvas.width / 2, 240);
+  const bg = new Image();
+  const logo = new Image();
+  const signature = new Image();
+  const mesc = new Image();
 
-      // Certificate Title
-      ctx.font = '24px Poppins';
-      ctx.fillStyle = '#000';
-      ctx.fillText('Certificate of Completion', canvas.width / 2, 280);
+  bg.src = 'bg.png';
+  logo.src = 'logo.png';
+  signature.src = 'signature.png';
+  mesc.src = 'msme.png';
 
-      // Body Text
-      ctx.font = '18px Poppins';
-      ctx.fillText(`This is to certify that`, canvas.width / 2, 310);
-      ctx.fillText(`${name}`, canvas.width / 2, 335);
-      ctx.fillText(`S/O ${father}`, canvas.width / 2, 360);
-      ctx.fillText(`has successfully completed the ${course} course.`, canvas.width / 2, 385);
+  Promise.all([
+    new Promise(res => bg.onload = res),
+    new Promise(res => logo.onload = res),
+    new Promise(res => signature.onload = res),
+    new Promise(res => mesc.onload = res)
+  ]).then(() => {
+    // Draw background
+    ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
 
-      // Signature
-      const signatureX = canvas.width - 230;
-      const signatureY = 410;
-      ctx.drawImage(signature, signatureX, signatureY, 120, 60);
+    // Logo (centered and larger)
+    const logoWidth = 108; // 80 * 1.35
+    const logoHeight = 108;
+    const logoX = (canvas.width - logoWidth) / 2;
+    
+    ctx.drawImage(logo, logoX, 100, logoWidth, logoHeight);
 
-      // Authorized Text
-      ctx.font = '14px Poppins';
-      ctx.fillText('Authorized Signatory', signatureX + 60, signatureY + 70);
+    // Institute Name (centered below logo)
+    ctx.font = '28px Poppins';
+    ctx.fillStyle = 'rgb(193, 18, 31)';
+    ctx.textAlign = 'center';
+    ctx.fillText('Advance Computer Education Center', canvas.width / 2, 240);
 
-      // Issued Date
-      ctx.textAlign = 'left';
-      ctx.fillText('Issued Date: ' + new Date().toLocaleDateString(), 80, signatureY + 70);
+    // Certificate Title
+    ctx.font = '24px Poppins';
+    ctx.fillStyle = '#000';
+    ctx.fillText('Certificate of Completion', canvas.width / 2, 280);
 
-      // MSME Logo
-      const mescWidth = 100;
-      const mescHeight = 60;
-      const mescX = (canvas.width - mescWidth) / 2;
-      const mescY = canvas.height - 120 - mescHeight;
-      ctx.drawImage(mesc, mescX, mescY, mescWidth, mescHeight);
+    // Body Text
+    ctx.font = '18px Poppins';
+    ctx.fillText(`This is to certify that`, canvas.width / 2, 310);
+    ctx.fillText(`${name}`, canvas.width / 2, 335);
+    ctx.fillText(`S/O ${father}`, canvas.width / 2, 360);
+    ctx.fillText(`has successfully completed the ${course} course.`, canvas.width / 2, 385);
 
-      // Show certificate and download link
-      canvas.style.display = 'block';
-      const downloadLink = document.getElementById('downloadLink');
-      downloadLink.href = canvas.toDataURL();
-      downloadLink.style.display = 'inline-block';
-      downloadLink.innerText = 'Download Certificate';
-    });
-  })
-  .catch(err => {
-    alert("Invalid passcode. Please contact support.");
+    // Signature
+    const signatureX = canvas.width - 230;
+    const signatureY = 410;
+    ctx.drawImage(signature, signatureX, signatureY, 120, 60);
+
+    // Authorized Text
+    ctx.font = '14px Poppins';
+    ctx.fillText('Authorized Signatory', signatureX + 60, signatureY + 70);
+
+    // Issued Date (left-aligned, same Y as signature text)
+    ctx.textAlign = 'left';
+    ctx.fillText('Issued Date: ' + new Date().toLocaleDateString(), 80, signatureY + 70);
+
+    // MSME logo at bottom center, 40px above bottom
+    const mescWidth = 100;
+    const mescHeight = 60;
+    const mescX = (canvas.width - mescWidth) / 2;
+    const mescY = canvas.height - 120 - mescHeight;
+    ctx.drawImage(mesc, mescX, mescY, mescWidth, mescHeight);
+
+    // Show canvas and link
+    canvas.style.display = 'block';
+    const downloadLink = document.getElementById('downloadLink');
+    downloadLink.href = canvas.toDataURL();
+    downloadLink.style.display = 'inline-block';
+    downloadLink.innerText = 'Download Certificate';
   });
 });
 
