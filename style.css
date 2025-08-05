@@ -598,6 +598,9 @@ footer {
 .about-section h2 {
   color: #ff3333;
   margin-bottom: 20px;
+    font-size: 32px;
+  text-shadow: 1px 1px 5px #000;
+
 }
 
 .about-section p {
@@ -853,6 +856,7 @@ form button:hover {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
 
 
 
