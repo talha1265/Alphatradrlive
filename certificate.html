@@ -159,14 +159,14 @@
     ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
 
     // Logo (centered and larger)
-    const logoWidth = 110; // 80 * 1.35
-    const logoHeight = 110;
+    const logoWidth = 120; // 80 * 1.35
+    const logoHeight = 120;
     const logoX = (canvas.width - logoWidth) / 2;
     
     ctx.drawImage(logo, logoX, 100, logoWidth, logoHeight);
 
     // Institute Name (centered below logo)
-    ctx.font = '28px Poppins';
+    ctx.font = '32px Poppins';
     ctx.fillStyle = 'rgb(193, 18, 31)';
     ctx.textAlign = 'center';
     ctx.fillText('Alpha Tech', canvas.width / 2, 240);
@@ -197,8 +197,8 @@
     ctx.fillText('Issued Date: ' + new Date().toLocaleDateString(), 80, signatureY + 70);
 
     // MSME logo at bottom center, 40px above bottom
-    const mescWidth = 120;
-    const mescHeight = 72;
+    const mescWidth = 130;
+    const mescHeight = 78;
     const mescX = (canvas.width - mescWidth) / 2;
     const mescY = canvas.height - 120 - mescHeight;
     ctx.drawImage(mesc, mescX, mescY, mescWidth, mescHeight);
