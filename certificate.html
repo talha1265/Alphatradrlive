@@ -159,8 +159,8 @@
     ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
 
     // Logo (centered and larger)
-    const logoWidth = 108; // 80 * 1.35
-    const logoHeight = 108;
+    const logoWidth = 110; // 80 * 1.35
+    const logoHeight = 110;
     const logoX = (canvas.width - logoWidth) / 2;
     
     ctx.drawImage(logo, logoX, 100, logoWidth, logoHeight);
@@ -197,8 +197,8 @@
     ctx.fillText('Issued Date: ' + new Date().toLocaleDateString(), 80, signatureY + 70);
 
     // MSME logo at bottom center, 40px above bottom
-    const mescWidth = 100;
-    const mescHeight = 60;
+    const mescWidth = 120;
+    const mescHeight = 72;
     const mescX = (canvas.width - mescWidth) / 2;
     const mescY = canvas.height - 120 - mescHeight;
     ctx.drawImage(mesc, mescX, mescY, mescWidth, mescHeight);
