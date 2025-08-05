@@ -780,6 +780,79 @@ footer {
   }
 
 
+.certificate-section {
+  background: #f9f9f9;
+  padding: 40px 20px;
+  text-align: center;
+}
+.certificate-container {
+  max-width: 600px;
+  margin: auto;
+}
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  text-align: left;
+}
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.certificate-container select {
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #888;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  appearance: none; /* Remove default arrow styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='10' height='5' viewBox='0 0 10 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l5 5 5-5H0z' fill='%23333'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+}
+
+.certificate-container select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #c1121f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: #a20f1a;
+
+}
+
+.canvas-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#certificateCanvas {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
 
 
