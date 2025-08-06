@@ -792,7 +792,7 @@ footer {
   max-width: 600px;
   margin: auto;
 }
-form label {
+/* form label {
   display: block;
   margin: 10px 0 5px;
   text-align: left;
@@ -814,14 +814,14 @@ form input {
   outline: none;
   transition: border-color 0.3s, box-shadow 0.3s;
   appearance: none; /* Remove default arrow styling */
-  -webkit-appearance: none;
+/*   -webkit-appearance: none;
   -moz-appearance: none;
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='10' height='5' viewBox='0 0 10 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l5 5 5-5H0z' fill='%23333'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 10px;
 }
-
+ */ */
 .certificate-container select:focus {
   border-color: #007bff;
   box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
@@ -856,6 +856,7 @@ form button:hover {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
 
 
 
