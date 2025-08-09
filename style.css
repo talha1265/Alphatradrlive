@@ -682,23 +682,9 @@ footer {
 }
 
 .reviews-section h2 {
-  font-size: 34px;
+  font-size: 32px;
   color: #ff3333;
   margin-bottom: 40px;
-  font-weight: 700;
-  position: relative;
-}
-
-.reviews-section h2::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background-color: #ff3333;
-  border-radius: 2px;
 }
 
 .reviews-container {
@@ -707,38 +693,17 @@ footer {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding-bottom: 20px;
-  scrollbar-width: thin;
-  scrollbar-color: #ff3333 #1a1a1a;
-}
-
-.reviews-container::-webkit-scrollbar {
-  height: 6px;
-}
-
-.reviews-container::-webkit-scrollbar-track {
-  background: #1a1a1a;
-}
-
-.reviews-container::-webkit-scrollbar-thumb {
-  background: #ff3333;
-  border-radius: 3px;
 }
 
 .review-card {
   flex: 0 0 auto;
   width: 280px;
-  background: #181818;
+  background: #121212;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   padding: 20px;
   scroll-snap-align: start;
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.review-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 18px rgba(255, 51, 51, 0.3);
 }
 
 .review-card img {
@@ -747,37 +712,24 @@ footer {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
-  border: 2px solid #ff3333;
 }
 
 .review-card h3 {
   margin: 0;
   font-size: 18px;
   color: #ffffff;
-  font-weight: 600;
 }
 
 .review-card p.college {
   font-size: 14px;
-  color: #ff4d4d;
+  color: #ff3333;
   margin: 4px 0 10px;
 }
 
 .review-card p.review {
   font-size: 15px;
   color: #dddddd;
-  line-height: 1.5;
-  position: relative;
-  padding-left: 16px;
-}
-
-.review-card p.review::before {
-  content: "“";
-  position: absolute;
-  left: 0;
-  top: -4px;
-  font-size: 24px;
-  color: #ff3333;
+  line-height: 1.4;
 }
 
 
@@ -910,6 +862,7 @@ form button:hover {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
 
 
 
