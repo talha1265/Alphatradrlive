@@ -676,14 +676,27 @@ footer {
 }
 .reviews-section {
   padding: 60px 20px;
-  background-color: #141414;
+  background: linear-gradient(135deg, #141414, #1a1a1a);
   text-align: center;
 }
 
 .reviews-section h2 {
-  font-size: 32px;
+  font-size: 36px;
   color: #ff3333;
   margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.reviews-section h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ff3333, transparent);
+  border-radius: 2px;
 }
 
 .reviews-container {
@@ -692,17 +705,38 @@ footer {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding-bottom: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: #ff3333 #1a1a1a;
+}
+
+.reviews-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.reviews-container::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.reviews-container::-webkit-scrollbar-thumb {
+  background: #ff3333;
+  border-radius: 4px;
 }
 
 .review-card {
   flex: 0 0 auto;
   width: 280px;
-  background: #121212;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  background: linear-gradient(145deg, #121212, #181818);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
   padding: 20px;
   scroll-snap-align: start;
   text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(255, 51, 51, 0.4);
 }
 
 .review-card img {
@@ -711,25 +745,42 @@ footer {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
+  border: 2px solid #ff3333;
+  box-shadow: 0 0 8px rgba(255, 51, 51, 0.4);
 }
 
 .review-card h3 {
   margin: 0;
   font-size: 18px;
   color: #ffffff;
+  font-weight: bold;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
 }
 
 .review-card p.college {
   font-size: 14px;
-  color: #ff3333;
+  color: #ff4d4d;
   margin: 4px 0 10px;
+  font-weight: 500;
 }
 
 .review-card p.review {
   font-size: 15px;
   color: #dddddd;
-  line-height: 1.4;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 20px;
 }
+
+.review-card p.review::before {
+  content: "“";
+  position: absolute;
+  left: 0;
+  top: -5px;
+  font-size: 28px;
+  color: #ff3333;
+}
+
 
  .empower-banner {
     background-color: #141414; /* Same as About Us h2 color */
@@ -856,6 +907,7 @@ form button:hover {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
 
 
 
