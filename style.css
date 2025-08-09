@@ -674,39 +674,36 @@ footer {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+/* --- Reviews Section --- */
 .reviews-section {
   padding: 60px 20px;
-  background: linear-gradient(135deg, #141414, #1a1a1a);
+  background: radial-gradient(circle at top, #1a1a1a, #0f0f0f);
   text-align: center;
 }
 
 .reviews-section h2 {
-  font-size: 36px;
+  font-size: 38px;
   color: #ff3333;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  font-weight: 700;
+  letter-spacing: 1px;
   position: relative;
-  display: inline-block;
+  animation: glowPulse 2s infinite alternate;
 }
 
-.reviews-section h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #ff3333, transparent);
-  border-radius: 2px;
+@keyframes glowPulse {
+  0% { text-shadow: 0 0 5px #ff3333, 0 0 10px #ff3333; }
+  100% { text-shadow: 0 0 15px #ff4d4d, 0 0 25px #ff4d4d; }
 }
 
 .reviews-container {
   display: flex;
-  gap: 20px;
+  gap: 24px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding-bottom: 20px;
   scrollbar-width: thin;
-  scrollbar-color: #ff3333 #1a1a1a;
+  scrollbar-color: #ff3333 transparent;
 }
 
 .reviews-container::-webkit-scrollbar {
@@ -714,7 +711,7 @@ footer {
 }
 
 .reviews-container::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: transparent;
 }
 
 .reviews-container::-webkit-scrollbar-thumb {
@@ -722,52 +719,64 @@ footer {
   border-radius: 4px;
 }
 
+/* --- Review Cards --- */
 .review-card {
   flex: 0 0 auto;
-  width: 280px;
-  background: linear-gradient(145deg, #121212, #181818);
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-  padding: 20px;
+  width: 300px;
+  background: rgba(20, 20, 20, 0.7);
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 51, 51, 0.2);
+  box-shadow: 0 8px 30px rgba(255, 51, 51, 0.15);
+  padding: 24px;
   scroll-snap-align: start;
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeInUp 0.8s ease forwards;
 }
 
 .review-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 24px rgba(255, 51, 51, 0.4);
+  transform: translateY(-10px) scale(1.03) rotateX(2deg) rotateY(-2deg);
+  box-shadow: 0 15px 40px rgba(255, 51, 51, 0.4);
 }
 
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Image --- */
 .review-card img {
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
   border: 2px solid #ff3333;
-  box-shadow: 0 0 8px rgba(255, 51, 51, 0.4);
+  box-shadow: 0 0 12px rgba(255, 51, 51, 0.5);
 }
 
+/* --- Name --- */
 .review-card h3 {
   margin: 0;
-  font-size: 18px;
+  font-size: 20px;
   color: #ffffff;
-  font-weight: bold;
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+  font-weight: 600;
 }
 
+/* --- College --- */
 .review-card p.college {
   font-size: 14px;
   color: #ff4d4d;
-  margin: 4px 0 10px;
+  margin: 4px 0 12px;
   font-weight: 500;
 }
 
+/* --- Review Text --- */
 .review-card p.review {
   font-size: 15px;
-  color: #dddddd;
-  line-height: 1.5;
+  color: #e5e5e5;
+  line-height: 1.6;
   position: relative;
   padding-left: 20px;
 }
@@ -776,10 +785,13 @@ footer {
   content: "“";
   position: absolute;
   left: 0;
-  top: -5px;
+  top: -6px;
   font-size: 28px;
   color: #ff3333;
 }
+
+
+
 
 
  .empower-banner {
@@ -907,6 +919,7 @@ form button:hover {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
 
 
 
