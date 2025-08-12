@@ -196,6 +196,11 @@
     const mescX = (canvas.width - mescWidth) / 2;
     const mescY = canvas.height - 115 - mescHeight;
     ctx.drawImage(mesc, mescX, mescY, mescWidth, mescHeight);
+     // MSME Registration Number (centered below logo)
+ctx.font = '14px Poppins';
+ctx.fillStyle = '#000';
+ctx.textAlign = 'center';
+ctx.fillText('MSME Reg. No: UDYAM-UP-00-0123456', canvas.width / 2, mescY + mescHeight + 20);
 
     // Show canvas and link
     canvas.style.display = 'block';
