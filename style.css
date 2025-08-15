@@ -488,6 +488,7 @@ button:hover {
 }
 
 /* Footer */
+/* Footer */
 footer {
   background-color: #111;
   color: #ccc;
@@ -495,6 +496,22 @@ footer {
   padding: 20px 10px;
   font-size: 14px;
 }
+
+footer .social-icons {
+  margin-top: 10px;
+}
+
+footer .social-icons a {
+  color: #ccc;
+  font-size: 20px;
+  margin: 0 8px;
+  transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+  color: #ff0000; /* Change to desired hover color */
+}
+
 
 /* Responsive Queries */
 @media screen and (max-width: 768px) {
@@ -962,6 +979,7 @@ form button:hover {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
 
 
 
