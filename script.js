@@ -25,21 +25,20 @@ paymentForm.addEventListener("submit", function (e) {
   qrSection.style.display = "block";
   qrSection.scrollIntoView({ behavior: "smooth" });
 
-  // Auto-download QR
-  const link = document.createElement("a");
-  link.href = "qr.png"; // your QR image path
-  link.download = "AlphaTech_Payment_QR.png";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+  // Show popup first
+  const confirmPayment = confirm(
+    "📌 Scan this QR Code to make a payment of ₹349.\n\n⚡ All the training and internship programs are free. This fee is only for registration and certificates.\n\nClick OK to continue to Google Pay."
+  );
 
-  // Open Google Pay with UPI deep link
-  const upiID = "mohdtalha206@okicici"; // <-- Replace with your UPI ID
-  const amount = "349";
-  const note = "Internship Registration";
-  const upiLink = `upi://pay?pa=${upiID}&pn=Alpha%20Tech&am=${amount}&cu=INR&tn=${encodeURIComponent(note)}`;
+  if (confirmPayment) {
+    // Open Google Pay with UPI deep link
+    const upiID = "mohdtalha206@okicici"; // <-- Replace with your UPI ID
+    const amount = "349";
+    const note = "Internship Registration";
+    const upiLink = `upi://pay?pa=${upiID}&pn=Alpha%20Tech&am=${amount}&cu=INR&tn=${encodeURIComponent(note)}`;
 
-  window.location.href = upiLink; // Opens Google Pay / UPI app
+    window.location.href = upiLink; // Opens Google Pay / UPI app
+  }
 });
 
 // WhatsApp verify
@@ -56,4 +55,3 @@ verifyBtn.addEventListener("click", function () {
 document.getElementById("hamburger").addEventListener("click", function () {
   document.getElementById("navLinks").classList.toggle("active");
 });
-
