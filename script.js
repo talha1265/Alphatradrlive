@@ -34,7 +34,7 @@ paymentForm.addEventListener("submit", function (e) {
   document.body.removeChild(link);
 
   // Open Google Pay with UPI deep link
-  const upiID = "alphatech@upi"; // <-- Replace with your UPI ID
+  const upiID = "mohdtalha206@okicici"; // <-- Replace with your UPI ID
   const amount = "349";
   const note = "Internship Registration";
   const upiLink = `upi://pay?pa=${upiID}&pn=Alpha%20Tech&am=${amount}&cu=INR&tn=${encodeURIComponent(note)}`;
@@ -56,3 +56,4 @@ verifyBtn.addEventListener("click", function () {
 document.getElementById("hamburger").addEventListener("click", function () {
   document.getElementById("navLinks").classList.toggle("active");
 });
+
