@@ -27,7 +27,7 @@ paymentForm.addEventListener("submit", function (e) {
 
   // Show popup first
   const confirmPayment = confirm(
-    "📌 Scan this QR Code to make a payment of ₹349.\n\n⚡ All the training and internship programs are free. This fee is only for registration and certificates.\n\nClick OK to continue to Google Pay."
+    "📌 Make the payment of ₹349 for registration and certificates.\n\n⚡ All the training and internship programs are free. This fee is only for registration and certificates.\n\nClick OK to continue to Google Pay."
   );
 
   if (confirmPayment) {
@@ -55,3 +55,4 @@ verifyBtn.addEventListener("click", function () {
 document.getElementById("hamburger").addEventListener("click", function () {
   document.getElementById("navLinks").classList.toggle("active");
 });
+
