@@ -32,7 +32,7 @@ paymentForm.addEventListener("submit", function (e) {
 
   if (confirmPayment) {
     // Open Google Pay with UPI deep link
-  const upiID = "mohdtalha206@okicici"; // or your exact UPI ID from GPay/PhonePe
+  const upiID = "obaidflex479@okaxis"; // or your exact UPI ID from GPay/PhonePe
 const amount = "9";
 const note = "Internship Registration";
 const upiLink = `upi://pay?pa=${upiID}&pn=Mohd%20Talha&am=${amount}&cu=INR&tn=${encodeURIComponent(note)}`;
@@ -56,6 +56,7 @@ verifyBtn.addEventListener("click", function () {
 document.getElementById("hamburger").addEventListener("click", function () {
   document.getElementById("navLinks").classList.toggle("active");
 });
+
 
 
 
