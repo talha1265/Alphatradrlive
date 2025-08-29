@@ -1,10 +1,3 @@
-const paymentForm = document.getElementById("paymentForm");
-const registerBtn = document.getElementById("registerBtn");
-const verifyBtn = document.getElementById("verifyBtn");
-const qrSection = document.getElementById("qrSection");
-
-let formData = {};
-
 paymentForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -25,41 +18,29 @@ paymentForm.addEventListener("submit", function (e) {
   qrSection.style.display = "block";
   qrSection.scrollIntoView({ behavior: "smooth" });
 
-  // Show popup first
+  // Payment details
+  const upiID = "obaidflex479@okaxis"; // <-- use your valid UPI ID
+  const amount = "349"; // fixed amount
+  const note = "Internship Registration";
+
+  const upiLink = `upi://pay?pa=${upiID}&pn=Mohd%20Talha&am=${amount}&cu=INR&tn=${encodeURIComponent(note)}`;
+
   const confirmPayment = confirm(
-    "📌 Make the payment of ₹349 for registration and certificates.\n\n⚡ All the training and internship programs are free. This fee is only for registration and certificates.\n\nClick OK to continue to Google Pay."
+    "📌 Make the payment of ₹349 for registration and certificates.\n\n⚡ All the training and internship programs are free. This fee is only for registration and certificates.\n\nClick OK to open UPI app or use QR."
   );
 
   if (confirmPayment) {
-    // Open Google Pay with UPI deep link
-  const upiID = "obaidflex479@okaxis"; // or your exact UPI ID from GPay/PhonePe
-const amount = "9";
-const note = "Internship Registration";
-const upiLink = `upi://pay?pa=${upiID}&pn=Mohd%20Talha&am=${amount}&cu=INR&tn=${encodeURIComponent(note)}`;
-window.location.href = upiLink;
+    // 1. Show QR Code
+    const qrImg = document.getElementById("upiQRImg");
+    const qrDownload = document.getElementById("downloadQR");
+    const qrDiv = document.getElementById("upiQR");
 
+    const qrAPI = `https://chart.googleapis.com/chart?cht=qr&chs=250x250&chl=${encodeURIComponent(upiLink)}`;
+    qrImg.src = qrAPI;
+    qrDownload.href = qrAPI;
+    qrDiv.style.display = "block";
 
+    // 2. Also try opening UPI app
+    window.location.href = upiLink;
   }
 });
-
-// WhatsApp verify
-verifyBtn.addEventListener("click", function () {
-  const message = `*Alpha Tech Payment Details*\n\nName: ${formData.name}\nEmail: ${formData.email}\nCourse: ${formData.course}\nReferral Coupon: ${formData.coupon}\n\nScreenshot: (Please send manually)`;
-
-  const whatsappNumber = "917572082633"; // Your WhatsApp number
-  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-
-  window.open(whatsappURL, "_blank");
-});
-
-// Mobile menu toggle
-document.getElementById("hamburger").addEventListener("click", function () {
-  document.getElementById("navLinks").classList.toggle("active");
-});
-
-
-
-
-
-
-
